@@ -10,7 +10,7 @@ mixin statistic_mixin(data, attr)
                 - var icon_obj = { data: data.value.icon, attr: {} }
                 +icon(icon_obj)
             - if (data.value.img !== undefined)
-                - var img_obj = { data: [ data.value.img ], attr: { avatar: true, inline: true, size: "mini" } }
+                - var img_obj = { data: [ { url: data.value.img  } ], attr: { avatar: true, inline: true, size: "mini" } }
                 +image(img_obj)
             - if (data.value.content !== undefined)
                 | #{data.value.content}
